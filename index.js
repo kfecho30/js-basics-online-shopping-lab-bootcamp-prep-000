@@ -25,12 +25,12 @@ function viewCart(){
   } else if(cart.length === 2){
     msg = 'In your cart, you have '+ Object.keys(cart[0])+' at $'+Object.values(cart[0])+' and '+ Object.keys(cart[1])+' at $'+Object.values(cart[1])+'.';
   } else {
-    msg = 'In your cart, you have ';
+    msg = `In your cart, you have `;
     for(var item in cart){
       if(cart[item] === cart[cart.length-1]){
-        msg += Object.keys(cart[item]) +' at $' +Object.values(cart[item])+'.';
+        msg += `${Object.keys(cart[item])} at $${Object.values(cart[item])}.`;
       } else {
-      msg += Object.keys(cart[item])+' at $'+Object.values(cart[item])+', ';
+      msg += `${Object.keys(cart[item])} at $${Object.values(cart[item])}, `;
       }
     }
   }
